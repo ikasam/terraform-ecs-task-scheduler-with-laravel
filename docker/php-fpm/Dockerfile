@@ -13,3 +13,4 @@ CMD [ "php-fpm", "-F", "-O" ]
 COPY ./docker/php-fpm/php.ini   /usr/local/php/php.ini
 COPY ./docker/php-fpm/php-fpm.d /usr/local/etc/php-fpm.d
 COPY ./src                      /var/www/html
+RUN composer install --optimize-autoloader --no-progress --no-suggest --no-dev
