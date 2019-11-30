@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/php-fpm/Dockerfile
+    environment:
+      TZ: Asia/Tokyo
+    volumes:
+      - ./docker/php-fpm/php.ini:/usr/local/php/php.ini:ro
+      - ./docker/php-fpm/php-fpm.d:/usr/local/etc/php-fpm.d:ro
+      - ./src:/var/www/html:rw
