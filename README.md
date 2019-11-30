@@ -52,7 +52,7 @@ $ docker push 123456789012.dkr.ecr.${YOUR_REGION}.amazonaws.com/inspire:latest
 
 ## Clean up
 
-Before destroy, don't forget disable the CloudWatch Event Rule.
+Before destroy, don't forget disable the CloudWatch Event Rule and stop all tasks in the cluster.
 
 ```bash
 $ terraform destroy
