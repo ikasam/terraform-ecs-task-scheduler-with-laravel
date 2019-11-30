@@ -1,0 +1,37 @@
+[
+  {
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "${awslogs-group}",
+        "awslogs-region": "${region}",
+        "awslogs-stream-prefix": "ecs"
+      }
+    },
+    "portMappings": [
+      {
+        "hostPort": 80,
+        "protocol": "tcp",
+        "containerPort": 80
+      }
+    ],
+    "cpu": 0,
+    "environment": [
+      {
+        "name": "XDEBUG",
+        "value": "off"
+      },
+      {
+        "name": "APP_ENV",
+        "value": "${APP_ENV}"
+      }
+    ],
+    "mountPoints": [],
+    "secrets": [],
+    "memoryReservation": 300,
+    "volumesFrom": [],
+    "image": "${container_image}",
+    "essential": true,
+    "name": "${container_name}"
+  }
+]

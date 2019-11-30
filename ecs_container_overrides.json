@@ -1,0 +1,8 @@
+{
+  "containerOverrides": [
+    {
+      "name": "${container_name}",
+      "command": [ "php", "artisan", "${command}" ]
+    }
+  ]
+}
