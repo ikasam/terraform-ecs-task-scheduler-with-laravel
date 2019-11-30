@@ -1,6 +1,15 @@
 ECS Task Scheduling by Terraform with Laravel
 ====
 
+## Requirements
+
+```bash
+$ terraform version
+Terraform v0.12.15
++ provider.aws v2.40.0
++ provider.template v2.1.2
+```
+
 ## Initialize Terraform
 
 ```bash
